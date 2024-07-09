@@ -1,0 +1,29 @@
+{
+  "name": "22-induction-helper",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tensorflow-models/coco-ssd": "^2.2.3",
+    "@tensorflow-models/mobilenet": "^2.1.1",
+    "@tensorflow/tfjs": "^4.19.0",
+    "@zxing/library": "^0.21.0",
+    "axios": "^1.6.8",
+    "browser-image-compression": "^2.0.2",
+    "opencv.js": "^1.2.1",
+    "tesseract.js": "^5.1.0",
+    "vue": "^3.4.21",
+    "vue-camera": "^1.0.2",
+    "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "vite": "^5.1.5",
+    "vite-plugin-vue-devtools": "^7.0.16"
+  }
+}
