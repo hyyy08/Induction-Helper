@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Data Table</title>
+    <!-- Bootstrap CSS -->
+    
+</head>
+<body>
+
+<h1></h1>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">UserID</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for dataUser in dataUsers %}
+                    <tr>
+                        <td>{{ dataUser.userID }}</td>
+                        <td>{{ dataUser.email }}</td>
+                        <td>{{ dataUser.firstName }}</td>
+                        <td>{{ dataUser.lastName }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

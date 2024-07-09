@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:latest
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: induction_database
+      POSTGRES_USER: induction_curtin
+      POSTGRES_PASSWORD: mango
+
+  backend:
+    build:
+      context: ./backend
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./backend:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+  frontend:
+    build:
+      context: ./frontend/settings
+    command: npm run dev
+    volumes:
+      - ./frontend/settings:/app
+    ports:
+      - "8080:8080"
+
+volumes:
+  postgres_data:
